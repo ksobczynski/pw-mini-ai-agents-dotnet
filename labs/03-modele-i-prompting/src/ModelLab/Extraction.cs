@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using System.Text.Json;
+using System.Text.RegularExpressions;
+
 
 public record ExtractionResult(int? Floor, bool? Elevator)
 {
@@ -45,6 +47,8 @@ public static class Extraction
               "elevator": true | false | null
             }
 
+            Nie ma być to podane w innej formia ani wrapperze - czysty json, nie string zawierajacy json, nie md zwykly samotny json
+
             Notatka: "{{note}}"
             """;
     }
@@ -54,6 +58,14 @@ public static class Extraction
     {
         try
         {
+            response = Regex.Replace(
+                response,
+                @"\A\s*```(?:json)?\s*(.*?)\s*```\s*\z",
+                "$1",
+                RegexOptions.IgnoreCase | RegexOptions.Singleline
+            );
+
+
             using var json = JsonDocument.Parse(response);
             var root = json.RootElement;
 
