@@ -1,7 +1,7 @@
 # Tworzenie agentów AI w .NET
 
 **Marcin Sulecki**  
-marcin.sulecki@sulmar.pl
+marcin.sulecki@pw.edu.pl
 
 ---
 
