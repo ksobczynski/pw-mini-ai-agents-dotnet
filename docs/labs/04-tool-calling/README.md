@@ -123,6 +123,8 @@ curl -s "http://localhost:8080/rpc/Switch.Set?id=0&on=false"
 dotnet run --project 02-Shelly.ToolCalling -- http://localhost:8080
 ```
 
+> **Uwaga:** jeśli chcesz pracować z fizycznym urządzeniem, zamiast `localhost:8080` musisz przekazać adres IP swojego Shelly.
+
 Pozostałe przykłady uruchamiaj zgodnie z instrukcjami w ich katalogach.
 
 ### Najważniejsze pojęcia

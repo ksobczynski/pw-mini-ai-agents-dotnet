@@ -81,7 +81,9 @@ przełącza aktualny stan gniazdka.
 
 Przykładowe wywołanie:
 
-http://192.168.33.1/rpc/Switch.Toggle?id=0
+http://localhost:8080/rpc/Switch.Toggle?id=0
+
+> **Uwaga:** jeśli chcesz pracować z fizycznym urządzeniem, zamiast `localhost:8080` musisz przekazać adres IP swojego Shelly.
 
 **Zadanie:** dodaj obsługę tej operacji do kolejnych aplikacji.
 
